@@ -1,0 +1,40 @@
+{% extends "admin/layouts.njk" %}
+
+{% block header %}
+    <a href="/admin/recipes" class="open">RECEITAS</a>
+    <a href="/admin/chefs">CHEFS</a>
+{% endblock %}
+
+{% block content %}
+    <main class="admin-main">
+
+        <h1>Gerenciar receitas</h1>
+
+        <section class="listing-recipes">
+
+            {% for recipe in recipes %}
+            <div class="recipe-card listing">
+                {% if not recipe.files_path[0] %}
+                <img class="recipe-img" id="{{recipe.id}}" src="http://placehold.it/508x508?text=RECEITA SEM FOTO" alt="{{recipe.title}}" style="object-fit: cover">
+                {% else %}
+                <img class="recipe-img" id="{{recipe.id}}" src="{{recipe.files_path[0]}}" alt="{{recipe.title}}">
+                {% endif %}
+                <div>
+                <p class="recipe-name">{{recipe.title}}</p>
+                {% for chef in chefs %}
+                {% if chef.id == recipe.chef_id %}
+                <p class="creator-name"> Por {{chef.name}} </p>
+                {% endif %}
+                {% endfor %}
+                <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </section>
+        
+    </main>
+
+    
+
+{% endblock %}

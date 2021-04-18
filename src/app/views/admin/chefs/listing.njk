@@ -1,0 +1,31 @@
+{% extends "admin/layouts.njk" %}
+
+{% block header %}
+    <a href="/admin/recipes">RECEITAS</a>
+    <a href="/admin/chefs" class="open">CHEFS</a>
+{% endblock %}
+
+{% block content %}
+    <main class="admin-main">
+
+        <h1>Gerenciar chefs</h1>
+
+        <section class="listing-chefs">
+
+            {% for chef in chefs %}
+            <div class="chef-card listing">
+                <img class="chef-img" id="{{chef.id}}" src="{{chef.file_path}}" alt="{{chef.name}}">
+                <div>
+                <p class="chef-name">{{chef.name}}</p>
+                <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </section>
+        
+    </main>
+
+    
+
+{% endblock %}

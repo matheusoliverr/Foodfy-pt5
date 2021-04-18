@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Foodfy</title>
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="/scripts.js" defer></script>
+    <script src="/images.js" defer></script>
+</head>
+
+<body>
+
+    <header class="admin-header">
+        <div>
+            <div class="admin-header-logo">
+                <a class="logo" href="/"><img src="/logo-adm.png" alt=""></a>
+            </div>
+            <div class="admin-header-links">
+                {% block header %}
+                <a href="/admin/recipes">RECEITAS</a>
+                <a href="/admin/chefs">CHEFS</a>
+                {% endblock %}
+            </div>
+        </div>
+
+    </header>
+
+    {% block content %}
+
+    {% endblock %}  
+    
+
+</body>
+
+</html>

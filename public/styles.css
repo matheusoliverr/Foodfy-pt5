@@ -1,0 +1,688 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    max-width: 940px;
+    margin: 36.1px auto 0;
+    display: grid;
+    grid-template-columns: 213px 381px auto;
+    align-items: center;
+}
+
+.logo{
+    text-align: left;
+}
+
+.header-links{
+    text-align: left;
+}
+
+header a{
+    text-decoration: none;
+    line-height: 19px;
+    text-align: center;
+    color: black;
+}
+
+.header-links a+a{
+    margin-left: 30px
+}
+
+.open{
+    font-weight: bold;
+}
+
+.logo.recipes{
+    margin-bottom: 50px;
+}
+
+body main{
+    min-height: 900px;
+}
+
+.introduction-card{
+    background-color: #FBDFDB;
+    max-width: 940px;
+    margin: 36px auto 50px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#introduction-text{
+    max-width: 316px;
+    padding: 117px 0 117px 60px;;
+}
+
+#introduction-text h1{
+    padding-bottom: 10px;
+    font-size: 32px;
+}
+
+#introduction-text p{
+    font-size: 18px;
+    opacity: 70%;
+    width: 100%;
+}
+
+#introduction-img{
+    padding-top: 66px;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: #EEEEEE;
+    position: absolute;
+    width: 100%;
+}
+
+footer p{
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+    padding: 23px 0;
+}
+
+/*Filter*/
+
+header form input{
+    width: 246px;
+    height: 37px;
+    border: 1px solid #DDDDDD;
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+header form input::placeholder{
+    font-size: 14px;
+    color: #999999
+}
+
+
+
+h1+.introduction-recipes.extended{
+    margin-top: 0
+}
+
+#searching-filter{
+    max-width: 940px;
+    margin: 50px auto 20px;
+    font-size: 24px;
+}
+
+/*About*/
+
+#about{
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+#about-title{
+    margin: 50px 0 20px 0;
+    font-size: 24px;
+}
+
+.about-text{
+    color: #444444;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.about-text.first{
+    margin-bottom: 28px;
+}
+
+.text-title{
+    margin: 30px 0 20px;
+    font-size: 20px;
+}
+
+/*Recipes*/
+
+#most-accessed{
+    max-width: 940px;
+    text-align: left;
+    font-size: 24px;
+    margin: 50px auto 20px;
+}
+
+.introduction-recipes{
+    max-width: 940px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+.introduction-recipes.extended{
+    margin-top:50px;
+}
+
+.introduction-recipes h1{
+    font-size: 24px;
+    margin: 50px 0 20px;
+}
+
+.recipe-img{
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    height: 140px;
+}
+
+.recipe-name{
+    font-size: 18px;
+    margin-bottom: 5px
+}
+
+.creator-name{
+    font-size: 14px;
+    color: #777777;
+}
+
+/*Recipe Details*/
+
+.recipe-card.detailed, .chef-card.detailed{
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.img-detailed{
+    width: 940px;
+    height: 280px;
+    border-radius: 15px;
+    margin: 50px 0 0;
+    object-fit: cover;
+}
+
+#no-image{
+    width: 940px;
+    height: 280px;
+    border-radius: 15px;
+    margin: 50px 0 0;
+    object-fit: cover;
+}
+
+.recipe-name.detailed, .chef-name.detailed{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.creator-name.detailed{
+    font-size: 20px;
+}
+
+.recipe-details{
+    max-width: 940px;
+    margin: 50px auto 0;
+}
+
+.details-title{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    align-items: center;
+}
+
+#ingredients{
+    max-width: 300px;
+}
+
+#preparation{
+    max-width:570px;
+}
+
+#information{
+    max-width: 780px;
+}
+
+.details-title a{
+    font-weight: bold;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+}
+
+.details-content{
+    margin: 20px 0 39px;
+    font-size: 18px;
+    color: #444444;
+    line-height:28px;
+}
+
+.recipe-card.detailed .image-change{
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+.recipe-card.detailed .image-change img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 3.5px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    opacity: 0.5
+}
+
+.recipe-card.detailed .image-change img.active{
+    opacity: 1;
+}
+
+.recipe-card.detailed .image-change img:hover{
+    opacity: 1;
+    transition: 200ms
+}
+
+/*Recipe details-hidden*/
+
+.details-content.hidden{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    margin-top: 5px;
+}
+
+/* Chefs */
+
+.listing-chefs.site{
+    margin: 50px 0;
+}
+
+.listing-chefs.site div p+p{
+    font-size: 14px;
+    color: #666666
+}
+
+/* Admin-recipes */
+
+.admin-header{
+    background-color: black;
+    margin-top: 0;
+    height: 80px;
+    max-width: unset;
+    justify-content: center;
+    display: block
+}
+
+.admin-header > div{
+    max-width: 940px;
+    margin: 0 auto 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 141px 1fr;
+    align-content: center;
+}
+
+.admin-header-logo, .admin-header-links{
+    align-self: center;
+}
+
+.admin-header-links a{
+    color: #999999;
+    font-style: 15px;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.admin-header-links a.open{
+    color: white;
+}
+
+.admin-main{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.admin-main h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 50px 0 30px;
+}
+
+.listing-recipes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+.recipe-card.listing{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+}
+
+.recipe-card.listing img{
+    width: 172px;
+    height: 80px;
+    border-radius: 8.57px;
+    cursor: unset;
+}
+
+.recipe-card.listing p:first-child{
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.recipe-card.listing p:nth-child(2){
+    margin-bottom: 10px;
+}
+
+.recipe-card.listing a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #6558C3;
+}
+
+.recipe-card.detailed > div, .chef-card.detailed div{
+    position: relative;
+    margin: 50px 0 20px;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    align-items: center;
+}
+
+.chef-card.detailed div{
+    margin-bottom: 51px
+}
+
+.recipe-card.detailed div h1, .chef-card.detailed div h1, .chef-recipes h1{
+    font-size: 24px;
+    text-align: left;
+}
+
+.recipe-card.detailed div button, 
+.chef-card.detailed div button, 
+.recipe-form > div button, 
+header form button, 
+.input-area .input-file .input-file-button{
+    padding: 9px 20px;
+    background-color: #6558C3;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.img-detailed.admin{
+    margin-top: 0;
+}
+
+.recipe-form div:first-child{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 50px 0 0;
+}
+
+.recipe-form > div h1{
+    text-align: left;
+    margin: 0
+}
+
+.form-buttons{
+    text-align: right;
+    align-items: center;
+}
+
+.admin-main.input form .form-buttons button.delete-button{
+    background-color: #DC4747;
+}
+
+.input-area h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.input-area .input-recipe-image{
+    position: relative;
+    height: 160.5px;
+    width: 150px;
+}
+
+.input-area .input-recipe-image input[type="file"]{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.input-area .input-recipe-image p{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #DDDDDD;
+    border-radius: 3.5px;
+    cursor: pointer;
+}
+
+.input-area .input-recipe-image p i{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    color: #999999;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.input-area .input-recipe-image:hover p i{
+    color: #777777;
+    transition: 200ms;
+}
+
+.input-area .recipe-images{
+    display: flex;
+}
+
+.input-area .recipe-images #image-show{
+    display: flex;
+    width: 150px;
+}
+
+.input-area .recipe-images img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    margin: 10px 0 0 10px;
+    border: 1px solid #DDDDDD;
+    border-radius: 3.5px;
+
+}
+
+.input-area .recipe-images .image-show-area{
+    position: relative;
+    cursor: pointer;
+}
+
+.input-area .recipe-images .image-show-area i{
+    position: absolute;
+    display: flex;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    color: red;
+    opacity: 0;
+    width: 95%;
+    height: 93%;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.input-area .recipe-images .image-show-area:hover i{
+    opacity: 0.5;
+    transition: 200ms;
+}
+
+.input-area select, .input-area input, textarea, .current-path{
+    border: 1px solid #DDDDDD;
+    width: 940px;
+    height: 49px;
+    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.admin-main.input.recipes .input-area textarea.last-input{
+    height: 220px;
+}
+
+textarea{
+    resize: none;
+    line-height: 24px
+}
+
+.recipe-form .input-area button{
+    background-color: white;
+    color: #6558C3;
+    padding: 0;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.recipe-form .input-area div div{
+    margin: 0;
+}
+
+.recipe-form .edit-button{
+    visibility: hidden;
+    opacity: 0;
+    width:0
+}
+
+.last-input{
+    margin-bottom: 200px;
+}
+
+.delete-button{
+    margin-right: 10px;
+}
+
+/* Admin-chefs */
+
+.listing-chefs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+}
+
+.chef-card.listing{
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.chef-card.listing img{
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.chef-card.listing p{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.chef-card.listing a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+}
+
+.chef-card.detailed img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-bottom: 30px;
+    object-fit: cover;
+}
+
+.chef-card.detailed .recipe-count{
+    margin-top: 4px;
+    font-size: 20px;
+    color: #777777
+}
+
+.chef-recipes{
+    max-width: 940px;
+    margin: 50px auto 0
+}
+
+.chef-recipes h1{
+    margin-bottom: 30px
+}
+
+.chef-recipe-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.input-area .input-file{
+    position: relative;
+    align-items: center;
+    width: 139px;
+    text-align: center;
+}
+
+.input-area .input-file input[type="file"]{
+    margin-top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.input-area .input-file .input-file-button{
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.input-area input.edit-path{
+    opacity: 0.6
+}
+
+.current-path{
+    color:rgba(0,0,0,0.36);
+    min-height: 49px;
+    height: auto
+}
